@@ -536,7 +536,15 @@ header section:hover .bi-chevron-left {
     header video {
         position: absolute;
         width: 520%;
-        height: 230%;
+        height: 320%;
+    }
+    header nav .logo_ul ul li a{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    header section #viewall{
+        top: 15px;
+        font-weight: 400;
     }
 }
 @media screen and (max-width: 375px){
