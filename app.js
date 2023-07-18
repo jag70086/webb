@@ -17,27 +17,37 @@ viewall.addEventListener('click', ()=> {
 });
 let json_url ='movie.json';
 
-fetch(json_url).then(Response => Response.json())
-.then((data) => {
+fetch(json_url)
+  .then(Response => Response.json())
+  .then((data) => {
+    let counter = 0; // Initialize the counter variable
+
     data.forEach((ele, i) => {
-        let {name, imdb, date, desc, pub, bposter, sposter, genre, url} = ele;
-        let card = document.createElement('a');
-        card.classList.add('card');
-        card.href = url;
-        card.innerHTML = `
+      if (counter >= 11) {
+        // If the counter reaches 13, break out of the loop
+        return;
+      }
+
+      let { name, imdb, date, desc, pub, bposter, sposter, genre, url } = ele;
+      let card = document.createElement('a');
+      card.classList.add('card');
+      card.href = url;
+      card.innerHTML = `
         <img src="${sposter}" alt="${name}" class="poster">
         <div class="rest_card">
-            <img src="${bposter}" alt="">
-            <div class="cont">
-                <h4>${name}</h4>
-                <div class="sub">
-                    <p>${genre}, ${date}</p>
-                    <h3><span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</h3>
-                </div>
+          <img src="${bposter}" alt="">
+          <div class="cont">
+            <h4>${name}</h4>
+            <div class="sub">
+              <p>${genre}, ${date}</p>
+              <h3><span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</h3>
             </div>
+          </div>
         </div>
-        `
-        cards.appendChild(card);
+      `;
+      cards.appendChild(card);
+      
+      counter++; // Increment the counter variable
     });
 
     data.forEach(element => {
