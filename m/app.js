@@ -1,17 +1,14 @@
+let left_btn = document.getElementsByClassName('bi bi-chevron-left')[0];
+let right_btn = document.getElementsByClassName('bi bi-chevron-right')[0];
+let cards = document.getElementsByClassName('cards')[0];
+let low_btn = document.getElementById('low_q');
+let high_btn = document.getElementById('high_q');
+let h4 = document.getElementById('h4');
+
+left_btn.addEventListener('click', ()=> {
+    cards.scrollLeft -= 140;
+})
+right_btn.addEventListener('click', ()=> {
+    cards.scrollLeft += 140;
+})
 let json_url ='movie.json';
-fetch(json_url).then((Response) => Response.json())
-.then(data => {
-let movies_array = data.filter(ele => {
-    return ele.name == "Secret Invasion";
-});
-document.getElementById('title').innerText = movies_array[0].name;
-document.getElementById('low_q').href = movies_array[0].low;
-document.getElementById('high_q').href = movies_array[0].high;
-document.getElementById('gen').innerText = movies_array[0].genre;
-document.getElementById('desc').innerText = movies_array[0].desc;
-document.getElementById('date').innerText = movies_array[0].date;
-document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i>${movies_array[0].imdb}`
-document.getElementsByTagName('video')[0].setAttribute('src', movies_array[0].trailer);
-document.getElementsByTagName('video')[0].play();
-document.title = `${movies_array[0].name}`
-});
