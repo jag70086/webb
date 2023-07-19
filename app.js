@@ -13,7 +13,7 @@ right_btn.addEventListener('click', ()=> {
     cards.scrollLeft += 140;
 })
 viewall.addEventListener('click', ()=> {
-    viewall.href = "all+contents.html"
+    viewall.href = "m/view_all.html"
 });
 let json_url ='movie.json';
 
