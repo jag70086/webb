@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Secret Invasion | Series</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo_ul">
+                <img src="img/logo.png" alt="">
+                <ul>
+                    <li>
+                        <a href="/" id="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" id="movies">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#" id="series">Series</a>
+                    </li>
+                    <li>
+                        <a href="#" id="kids">Kids</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_user">
+                <input type="text" placeholder="Search..." id="search_input">
+                <button id="clr"><i class="bi bi-x-lg"></i></button>
+                <div class="search">
+                    <!--<a href="#" class="card">
+                        <img src="img/the boys.jpg" alt="">
+                        <div class="cont">
+                            <h3>The Boys</h3>
+                            <p>Action, 2021 , <span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</p>
+                        </div>
+                    </a>-->
+                </div>
+            </div>
+            
+        </nav>
+        
+        <section class="section">
+            <div class="cards">
+              <!--  <a href="#" class="card">
+                    <img src="img/the boys.jpg" alt="" class="poster">
+                    <div class="rest_card">
+                        <img src="img/the boys1.jpg" alt="">
+                        <div class="cont">
+                            <h4>The Boys</h4>
+                            <div class="sub">
+                                <p>Action, 2022</p>
+                                <h3><span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</h3>
+                            </div>
+                        </div>
+                    </div>
+                </a>-->
+            </div>
+        </section>
+        <section class="section2">
+            <div class="cards2">
+            </div>
+        </section>
+        <section class="section3">
+            <div class="cards3">
+            </div>
+            <i class="bi bi-arrow-right"></i>
+            <i class="bi bi-arrow-left"></i>
+        </section>
+    </header>
+    <script>
+        let cards = document.getElementsByClassName('cards')[0];
+        let cards2 = document.getElementsByClassName('cards2')[0];
+        let cards3 = document.getElementsByClassName('cards3')[0];
+        let left_btn = document.querySelector('.bi-arrow-left');
+        let right_btn = document.querySelector('.bi-arrow-right');
+        let search = document.getElementsByClassName("search")[0];
+        let search_input = document.getElementById("search_input");
+        let clear = document.getElementById("clr");
+        let json_url = 'viewall.json';
+        fetch(json_url)
+          .then((Response) => Response.json())
+          .then((data) => {
+            let counter = 0; // Initialize the counter variable
+            let a = 0;
+            let b = 7;
+            let c = 14;
+            let d = 21;
+      
+            left_btn.addEventListener('click', () => {
+              if (a > 0) {
+                a -= 21;
+                b -= 21;
+                c -= 21;
+                d -= 21;
+                displayCards(data);
+              }
+            });
+      
+            right_btn.addEventListener('click', () => {
+              if (d <= data.length) {
+                a += 21;
+                b += 21;
+                c += 21;
+                d += 21;
+                displayCards(data);
+              }
+            });
+      
+            function displayCards(list) {
+              cards.innerHTML = '';
+              cards2.innerHTML = '';
+              cards3.innerHTML = '';
+      
+              for (let i = 0; i < list.length; i++) {
+                let { name, imdb, date, genre, url, sposter, bposter } = list[i];
+                let card = document.createElement('a');
+                card.classList.add('card');
+                card.href = url;
+                card.innerHTML = `
+                  <img src="${sposter}" alt="${name}" class="poster">
+                  <div class="rest_card">
+                    <img src="${bposter}" alt="">
+                    <div class="cont">
+                      <h4>${name}</h4>
+                      <div class="sub">
+                        <p>${genre}, ${date}</p>
+                        <h3><span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</h3>
+                      </div>
+                    </div>
+                  </div>
+                `;
+      
+                if (i >= b && i < c) {
+                  cards2.appendChild(card);
+                } else if (i >= a && i < b) {
+                  cards.appendChild(card);
+                } else if (i >= c && i < d) {
+                  cards3.appendChild(card);
+                }
+              }
+            }
+      
+            displayCards(data);
+            
+
+            data.forEach(element => {
+        let {name, imdb, date, sposter, genre, url} = element;
+        let card = document.createElement('a');
+        card.classList.add('card');
+        card.href = url;
+        card.innerHTML = `
+        <img src="${sposter}" alt="">
+                        <div class="cont">
+                            <h3>${name}</h3>
+                            <p>${genre}, ${date} , <span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</p>
+                        </div>
+        `
+        search.appendChild(card);
+    });
+    search_input.addEventListener('keyup', ()=> {
+        let fliter = search_input.value.toUpperCase();
+        let a = search.getElementsByTagName('a');
+
+        for (let index = 0; index < a.length; index++) {
+            let b = a[index].getElementsByClassName('cont')[0];
+            let TextValue = b.textContent || b,innerText;
+            if (TextValue.toUpperCase().indexOf(fliter) > -1) {
+                a[index].style.display = 'flex';
+                search.style.visibility = 'visible';
+                search.style.opacity = 1;
+            } else {
+                a[index].style.display = 'none';
+            }
+        }
+    })
+    let searchhh = 0;
+    clear.addEventListener('click', ()=> {
+      if (searchhh%2 == 0){search.style.opacity = 0;
+        clear.innerHTML = '';
+        clear.innerHTML = `<i class="bi bi-arrow-counterclockwise"></i>` ;}
+      else {search.style.opacity = 1;
+        clear.innerHTML = '';
+        clear.innerHTML = `<i class="bi bi-x-lg"></i>` ;}
+      searchhh++
+    });
+
+    let series = document.getElementById('series');
+    series.addEventListener("click", ()=>{
+        cards.innerHTML = '';
+
+        let series_array = data.filter(ele => {
+            return ele.type == "series";
+        });
+        displayCards(series_array);
+        
+    });
+
+
+    let moviess = document.getElementById('movies');
+    moviess.addEventListener("click", ()=>{
+        cards.innerHTML = '';
+
+        let movies_array = data.filter(ele => {
+            return ele.type == "movie";
+        });
+        displayCards(movies_array);
+        
+    });
+
+    let kids = document.getElementById('kids');
+    kids.addEventListener("click", ()=>{
+        cards.innerHTML = '';
+
+        let kids_array = data.filter(ele => {
+            return ele.type == "kids";
+        });
+        displayCards(kids_array);
+    });
+  });
+      </script>
+      
+</body>
+</html>
