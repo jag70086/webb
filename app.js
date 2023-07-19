@@ -23,7 +23,7 @@ fetch(json_url)
     let counter = 0; // Initialize the counter variable
 
     data.forEach((ele, i) => {
-      if (counter >= 11) {
+      if (counter >= 15) {
         // If the counter reaches 13, break out of the loop
         return;
       }
