@@ -223,11 +223,12 @@ header .content h1 {
     font-size: 50px;
 }
 
-header .content p {
-    font-size: 11px;
+header .content #desc {
+    font-size: 13px;
     width: 350px;
     word-break: break-all;
     font-weight: 600;
+    color: hsl(0, 0%, 100%);
 }
 
 header .content .details {

@@ -168,6 +168,7 @@ header nav .search_user .search .card {
     display: none;
 }
 
+
 header nav .search_user .search .card::before {
     content: '';
     position: absolute;
@@ -593,8 +594,8 @@ header section .bi-arrow-left , .bi-arrow-right{
     position: absolute;
     top: 100%;
     left: 3%;
-    width: 25px;
-    height: 25px;
+    width: 33px;
+    height: 33px;
     background: rgb(255, 255, 255, .3);
     color: #fff;
     display: flex;
@@ -618,6 +619,7 @@ header section:hover .bi-arrow-right {
 }
 
 header section:hover .bi-arrow-left {
+    left: 15%;
     opacity: 1;
 }
 
@@ -665,18 +667,47 @@ header section:hover .bi-arrow-left {
 }
 
 @media screen and (max-width: 650px) {
-    header video {
-        position: absolute;
-        width: 520%;
-        height: 320%;
+    header::-webkit-scrollbar{
+        visibility: hidden;
     }
     header nav .logo_ul ul li a{
         font-size: 15px;
         font-weight: 600;
     }
+    
+    
+    
+
     header section #viewall{
         top: 15px;
         font-weight: 400;
+    }
+    header .section {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 180px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
+    }
+    header .section2 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 380px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
+    }
+    header .section3 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 580px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
     }
 }
 @media screen and (max-width: 375px){

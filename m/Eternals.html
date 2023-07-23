@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <meta name="description" content="download secret invasion . Episode 5 added.">
+                    <link rel="stylesheet" href="style.css">
+                    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+                    <title>Eternals | Movies</title>
+                </head>
+                <body>
+                    <header>
+                        <img src="" alt="" id="video">
+                        <nav>
+                            <div class="logo_ul">
+                                <img src="img/logo.png" alt="">
+                                <ul>
+                                    <li>
+                                        <a href="/" id="home">Home</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </nav>
+                        <div class="content">
+                            <h1 id="title">Money Heist</h1>
+                            <p id="desc">A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain.</p>
+                            <div class="details">
+                                <h6>A Hotstar Original Series</h6>
+                                <h5 id="gen">Thriller</h5>
+                                <h4 id="date">2021</h4>
+                                <h3 id="rate"><span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</h3>
+                            </div>
+                            <div class="btns">
+                                <a href="#"  id="low_q">480p</a>
+                                <a href="#"  id="high_q">720p</a>
+                            </div>
+                        </div>
+                        <section>
+                            <h4 id="h4">Choose Quality</h4>
+                            <i class="bi bi-chevron-right"></i>
+                            <i class="bi bi-chevron-left"></i>
+                            <div class="cards">
+                            <!--  <a href="#" class="card">
+                                    <img src="img/the boys.jpg" alt="" class="poster">
+                                    <div class="rest_card">
+                                        <img src="img/the boys1.jpg" alt="">
+                                        <div class="cont">
+                                            <h4>The Boys</h4>
+                                            <div class="sub">
+                                                <p>Action, 2022</p>
+                                                <h3><span>IMDB</span><i class="bi bi-star-fill"></i> 9.6</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>-->
+                            </div>
+                        </section>
+                    </header>
+                    <script src="app.js"></script>
+                    <script>
+                        fetch(json_url).then((Response) => Response.json())
+                        .then(data => {
+                        let movies_array = data.filter(ele => {
+                            return ele.name == 'Eternals';
+                        });
+                        let nos = parseInt(movies_array[0].nos);
+                        document.getElementById('title').innerText = movies_array[0].name;
+                        document.getElementById('gen').innerText = movies_array[0].genre;
+                        document.getElementById('desc').innerText = movies_array[0].desc;
+                        document.getElementById('date').innerText = movies_array[0].date;
+                        document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i>${movies_array[0].imdb}`
+                        document.getElementById('video').setAttribute('src', movies_array[0].poster);
+                        document.title = `${movies_array[0].name}`
+                
+                        movies_array.forEach((ele, i) => {
+                        let {type, bposter, sposter, nos, hep1, hep2, hep3, hep4, hep5, hep6, lep1, lep2, lep3, lep4, lep5, lep6} = ele;
+                        high_btn.addEventListener('click', ()=> {
+                        high_btn.style.animation = 'buttn 1s linear infinite'
+                        low_btn.style.animation = 'button 1s linear infinite'
+                        h4.innerText = 'Quality : 720p'
+                        cards.innerHTML= " ";
+                        for (let j = 1; j <= nos; j++) {
+                        let card = document.createElement('a');
+                        card.classList.add('card');
+                        card.href = movies_array[0].hl1
+                        card.innerHTML = `
+                        <img src="${sposter}" alt="${movies_array[0].name}" class="poster">
+                        <div class="rest_card">
+                            <img src="${bposter}" alt="">
+                            <div class="cont"><h4>Eternals</h4>
+                            </div>
+                        </div>
+                        `
+                        cards.appendChild(card);}
+                    });
+                    low_btn.addEventListener('click', ()=> {
+                        low_btn.style.animation = 'buttn 1s linear infinite'
+                        high_btn.style.animation = 'button 1s linear infinite'
+                        h4.innerText = 'Quality : 480p'
+                        cards.innerHTML= " ";
+                        for (let j = 1; j <= nos; j++) {
+                        let card = document.createElement('a');
+                        card.classList.add('card');
+                        card.href = movies_array[0].ll1
+                        card.innerHTML = `
+                        <img src="${sposter}" alt="${movies_array[0].name}" class="poster">
+                        <div class="rest_card">
+                            <img src="${bposter}" alt="">
+                            <div class="cont"><h4>Eternals</h4>
+                            </div>
+                        </div>
+                        `
+                        cards.appendChild(card);}
+                    });
+                });
+                        });
+                    </script>
+                </body>
+                </html>
