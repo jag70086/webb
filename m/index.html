@@ -68,7 +68,7 @@
               document.getElementById('date').innerText = movies_array[0].date;
               document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i>${movies_array[0].imdb}`;
               document.getElementById('video').setAttribute('src', movies_array[0].poster);
-              document.title = `${movies_array[0].name} | ${movies_array[0].type}`;
+              document.title = `${movies_array[0].name} | ${movies_array[0].type.charAt(0).toUpperCase() + movies_array[0].type.slice(1)}`;
 
               const cardsContainer = document.querySelector('.cards');
 
