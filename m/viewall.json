@@ -5,7 +5,7 @@
     "bposter": "img/secret_invasion1.avif", 
     "genre": "Action", 
     "type": "series", 
-    "url": "https://www.movies4wiz./m?s=Secret+Invasion"
+    "url": "https://www.movies4wiz.online/m?s=Secret+Invasion"
 }, {
     "name": "Ant Man", 
     "imdb": 7.3, 
@@ -14,7 +14,7 @@
     "bposter": "img/ant man1.jpg", 
     "genre": "Action", 
     "type": "movie", 
-    "url": "https://www.movies4wiz./m?s=Ant+Man"
+    "url": "https://www.movies4wiz.online/m?s=Ant+Man"
 }, {
     "name": "Moon Knight", 
     "imdb": 7.3, 
@@ -23,7 +23,7 @@
     "bposter": "img/moon knight1.webp", 
     "genre": "Action", 
     "type": "series", 
-    "url": "https://www.movies4wiz./m?s=Moon+Knight"
+    "url": "https://www.movies4wiz.online/m?s=Moon+Knight"
 }, {
     "name": "The Avengers", 
     "imdb": 8.0, 
@@ -32,7 +32,7 @@
     "bposter": "img/The Avengers1.jpg", 
     "genre": "Action", 
     "type": "movie", 
-    "url": "https://www.movies4wiz./m?s=The+Avengers"
+    "url": "https://www.movies4wiz.online/m?s=The+Avengers"
 }, {
     "name": "Avengers Endgame", 
     "imdb": "8.4", 
@@ -41,7 +41,7 @@
     "bposter": "img/Avengers Endgame1.avif", 
     "genre": "Action", 
     "type": "movie", 
-    "url": "https://www.movies4wiz./m?s=Avengers+Endgame"
+    "url": "https://www.movies4wiz.online/m?s=Avengers+Endgame"
 }, {
     "name": "Eternals", 
     "imdb": "6.3", 
@@ -50,5 +50,5 @@
     "bposter": "img/Eternals1.webp", 
     "genre": "Action", 
     "type": "movie", 
-    "url": "https://www.movies4wiz.online/m?s=Eternals"
+    "url": "https://www.movies4wiz.onlineonline/m?s=Eternals"
 }]
