@@ -60,7 +60,7 @@
                 return ele.name == `"${startValue}"`;
             });
 
-            let nos = parseInt(movies_array[0].nos);
+            
 
             document.getElementById('title').innerText = movies_array[0].name;
             document.getElementById('gen').innerText = movies_array[0].genre;
@@ -88,7 +88,7 @@
                 `;
                 cardsContainer.appendChild(card);
             }
-
+            let nos = parseInt(movies_array[0].nos);
             high_btn.addEventListener('click', () => {
                 high_btn.style.animation = 'buttn 1s linear infinite';
                 low_btn.style.animation = 'button 1s linear infinite';
