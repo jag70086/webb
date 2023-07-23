@@ -96,10 +96,12 @@
                 cardsContainer.innerHTML = " ";
 
                 for (let j = 1; j <= nos; j++) {
-                  createCard(j, movies_array[0][`hep${j}`], movies_array[0].sposter, movies_array[0].bposter);
+                  
                     if (nos == 1){
                         createCard(j, movies_array[0][`hl1`], movies_array[0].sposter, movies_array[0].bposter);
                     }
+                    else {
+                        createCard(j, movies_array[0][`hep${j}`], movies_array[0].sposter, movies_array[0].bposter);}
                 }
               });
 
@@ -110,10 +112,11 @@
                 cardsContainer.innerHTML = " ";
 
                 for (let j = 1; j <= nos; j++) {
-                  createCard(j, movies_array[0][`lep${j}`], movies_array[0].sposter, movies_array[0].bposter);
                     if (nos == 1){
                         createCard(j, movies_array[0][`ll1`], movies_array[0].sposter, movies_array[0].bposter);
                     }
+                     else {
+                        createCard(j, movies_array[0][`hep${j}`], movies_array[0].sposter, movies_array[0].bposter);}
                 }
               });
             } else {
