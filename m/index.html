@@ -51,12 +51,13 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const startValue = urlParams.get('s');
+        startValue = startValue.replace(/\+/g, ' ');
 
         fetch(json_url)
         .then((Response) => Response.json())
         .then(data => {
             let movies_array = data.filter(ele => {
-                return ele.name == startValue;
+                return ele.name == `"${startValue}"`;
             });
 
             let nos = parseInt(movies_array[0].nos);
