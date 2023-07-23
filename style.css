@@ -43,10 +43,11 @@ header::after {
     z-index: -1;
 }
 
-#video {
+header video {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 190%;
+    top: -47%;
     z-index: -1;
 }
 
@@ -223,12 +224,11 @@ header .content h1 {
     font-size: 50px;
 }
 
-header .content #desc {
-    font-size: 13px;
+header .content p {
+    font-size: 11px;
     width: 350px;
     word-break: break-all;
     font-weight: 600;
-    color: hsl(0, 0%, 100%);
 }
 
 header .content .details {
@@ -316,33 +316,6 @@ header .content .btns a{
     }
     100%{
         background: linear-gradient(360deg, #00bdff, #0079ff);
-    }
-}
-
-@keyframes buttn{
-    0%{
-        background: linear-gradient(0deg, #3c00ff, #ff3700);
-    }
-    12%{
-        background: linear-gradient(45deg, #3c00ff, #ff3700);
-    }
-    24%{
-        background: linear-gradient(95deg, #3c00ff, #ff3700);
-    }
-    36%{
-        background: linear-gradient(145deg, #3c00ff, #ff3700);
-    }
-    48%{
-        background: linear-gradient(195deg, #3c00ff, #ff3700);
-    }
-    60%{
-        background: linear-gradient(245deg, #3c00ff, #ff3700);
-    }
-    72%{
-        background: linear-gradient(295deg, #3c00ff, #ff3700);
-    }
-    100%{
-        background: linear-gradient(360deg, #3c00ff, #ff3700);
     }
 }
 
@@ -564,6 +537,7 @@ header section:hover .bi-chevron-left {
         position: absolute;
         width: 520%;
         height: 320%;
+        top: -115%;
     }
     header nav .logo_ul ul li a{
         font-size: 15px;

@@ -8,20 +8,8 @@
       "genre": "Action",
       "type": "series",
       "desc": "Nick Fury learns of a secret invasion of Earth by a faction of shapeshifting Skrulls; Fury joins his allies, and together they race against time to thwart an imminent Skrull invasion and save humanity.",
-      "poster": "img/secret_invasion1.avif",
-      "nos": "5",
-      "hep1": "https://www.d-links.online?start=174506",
-      "hep2": "https://www.d-links.online?start=174507",
-      "hep3": "https://www.d-links.online?start=174508",
-      "hep4": "https://www.d-links.online?start=174509",
-      "hep5": "https://www.d-links.online?start=174510",
-      "hep6": "https://www.d-links.online?start=174511",
-      "lep1": "https://www.d-links.online?start=174512",
-      "lep2": "https://www.d-links.online?start=174513",
-      "lep3": "https://www.d-links.online?start=174514",
-      "lep4": "https://www.d-links.online?start=174515",
-      "lep5": "https://www.d-links.online?start=174516",
-      "lep6": "https://www.d-links.online?start=174517"
+      "url": "https://www.movies4wiz.online/m?s=Secret+Invasion",
+      "trailer": "video/secret_invasion.mp4"
     },
     {
       "name": "Ant Man",
@@ -32,10 +20,7 @@
       "genre": "Action",
       "type": "movie",
       "desc": "Scott, a master thief, gains the ability to shrink in scale with the help of a futuristic suit. Now he must rise to the occasion of his superhero status and protect his secret from unsavoury elements.",
-      "poster": "img/ant man1.jpg",
-      "nos": "1",
-      "hl1": "https://www.d-links.online?start=174518",
-      "ll1": "https://www.d-links.online?start=174519"
+      "url": "https://www.movies4wiz.online/m?s=Ant+Man"
     },
     {
       "name": "Moon Knight",
@@ -46,20 +31,7 @@
       "genre": "Action",
       "type": "series",
       "desc": "Steven Grant and mercenary Marc Spector investigate the mysteries of the Egyptian gods from inside the same body.",
-      "poster": "img/moon knight1.webp",
-      "nos": "6",
-      "hep1": "https://www.d-links.online?start=174520",
-      "hep2": "https://www.d-links.online?start=174521",
-      "hep3": "https://www.d-links.online?start=174522",
-      "hep4": "https://www.d-links.online?start=174523",
-      "hep5": "https://www.d-links.online?start=174524",
-      "hep6": "https://www.d-links.online?start=174525",
-      "lep1": "https://www.d-links.online?start=174526",
-      "lep2": "https://www.d-links.online?start=174527",
-      "lep3": "https://www.d-links.online?start=174528",
-      "lep4": "https://www.d-links.online?start=174529",
-      "lep5": "https://www.d-links.online?start=174530",
-      "lep6": "https://www.d-links.online?start=174531"
+      "url": "https://www.movies4wiz.online/m?s=Moon+Knight"
     },
     {
       "name": "The Avengers",
@@ -70,10 +42,7 @@
       "genre": "Action",
       "type": "movie",
       "desc": "Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
-      "poster": "img/The Avengers1.jpg",
-      "nos": "1",
-      "hl1": "https://www.d-links.online?start=174532",
-      "ll1": "https://www.d-links.online?start=174533"
+      "url": "https://www.movies4wiz.online/m?s=The+Avengers"
     },
     {
       "name": "Avengers Endgame",
@@ -84,10 +53,7 @@
       "genre": "Action",
       "type": "movie",
       "desc": "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
-      "poster": "img/Avengers Endgame2.webp",
-      "nos": 1,
-      "hl1": "https://www.d-links.online?start=174534",
-      "ll1": "https://www.d-links.online?start=174535"
+      "url": "https://www.movies4wiz.online/m?s=Avengers+Endgame"
     },
     {
       "name": "Eternals",
@@ -98,10 +64,7 @@
       "genre": "Action",
       "type": "movie",
       "desc": "The Eternals, a race of immortal beings with superhuman powers who have secretly lived on Earth for thousands of years, reunite to battle the evil Deviants.",
-      "poster": "img/Eternals2.webp",
-      "nos": 1,
-      "hl1": "https://www.d-links.online?start=174536",
-      "ll1": "https://www.d-links.online?start=174537"
+      "url": "https://www.movies4wiz.online/m?s=Eternals"
     }
   ]
   
