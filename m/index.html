@@ -70,7 +70,7 @@ const startValue = urlParams.get('s');
         let movies_array = data.filter(ele => {
             return ele.name == `"${startVale}"`;
         });
-        let nos = parseInt(movies_array[0].nos);
+        
         document.getElementById('title').innerText = movies_array[0].name;
         document.getElementById('gen').innerText = movies_array[0].genre;
         document.getElementById('desc').innerText = movies_array[0].desc;
@@ -78,6 +78,7 @@ const startValue = urlParams.get('s');
         document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i>${movies_array[0].imdb}`
         document.getElementById('video').setAttribute('src', movies_array[0].poster);
         document.title = `${movies_array[0].name} | ${movies_array[0].type}`
+            let nos = parseInt(movies_array[0].nos);
 
         movies_array.forEach((ele, i) => {
         let {type, bposter, sposter, nos, hep1, hep2, hep3, hep4, hep5, hep6, lep1, lep2, lep3, lep4, lep5, lep6} = ele;
