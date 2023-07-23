@@ -18,7 +18,7 @@ body {
 header {
     position: relative;
     width: 80%;
-    height: 90%;
+    height: 95%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 10px 25px -8px #000;
@@ -40,13 +40,6 @@ header::after {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, transparent, #000);
-    z-index: -1;
-}
-
-#video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: -1;
 }
 
@@ -110,6 +103,16 @@ header nav .search_user input {
     margin-right: 20px;
 }
 
+#clr {
+    padding: 3px 10px;
+    border-radius: 70px;
+    border: none;
+    outline: none;
+    background: rgb(255, 255, 255, .3);
+    color: #fff;
+    margin-right: 20px;
+}
+
 header nav .search_user input::placeholder {
     color: #fff;
 }
@@ -165,6 +168,7 @@ header nav .search_user .search .card {
     display: none;
 }
 
+
 header nav .search_user .search .card::before {
     content: '';
     position: absolute;
@@ -211,148 +215,34 @@ header nav .search_user .search .card .cont span{
     font-weight: 1000;
 }
 
-header .content {
-    position: relative;
-    color: #fff;
-    margin-top:0px;
-    padding-left: 50px;
-    width: 100vh;
-}
-
-header .content h1 {
-    font-size: 50px;
-}
-
-header .content #desc {
-    font-size: 13px;
-    width: 350px;
-    word-break: break-all;
-    font-weight: 600;
-    color: hsl(0, 0%, 100%);
-}
-
-header .content .details {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-header .content .details h6 {
-    color: rgb(255, 255, 255, .8);
-    font-size: 10px;
-    margin-right: 10px;
-}
-
-header .content .details h5 {
-    color: rgb(142, 230, 48);
-    font-size: 10px;
-    margin-right: 10px;
-}
-
-header .content .details h4 {
-    color: rgb(255, 255, 255, .8);
-    font-size: 10px;
-    margin-right: 10px;
-}
-
-header .content .details h3 {
-    color: rgb(255, 255, 255, .8);
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-}
-
-header .content .details h3 span{
-    background: yellow;
-    color: #000;
-    padding: 0px 3px;
-    margin: 0px 5px 0px 5px;
-    font-weight: 1000;
-}
-
-header .content .details h3 i{
-    margin-right: 5px;
-}
-
-header .content .btns {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-}
-
-header .content .btns a{
-    padding: 8px 12px;
-    font-size: 15px;
-    font-weight: 600;
-    background: linear-gradient(90deg, #00bdff, #0079ff);
-    border-radius: 5px;
-    color: #fff;
-    margin-left: 10px;
-    text-decoration: none;
-    animation: button 1s linear infinite;
-}
-
-@keyframes button{
-    0%{
-        background: linear-gradient(0deg, #00bdff, #0079ff);
-    }
-    12%{
-        background: linear-gradient(45deg, #00bdff, #0079ff);
-    }
-    24%{
-        background: linear-gradient(95deg, #00bdff, #0079ff);
-    }
-    36%{
-        background: linear-gradient(145deg, #00bdff, #0079ff);
-    }
-    48%{
-        background: linear-gradient(195deg, #00bdff, #0079ff);
-    }
-    60%{
-        background: linear-gradient(245deg, #00bdff, #0079ff);
-    }
-    72%{
-        background: linear-gradient(295deg, #00bdff, #0079ff);
-    }
-    100%{
-        background: linear-gradient(360deg, #00bdff, #0079ff);
-    }
-}
-
-@keyframes buttn{
-    0%{
-        background: linear-gradient(0deg, #3c00ff, #ff3700);
-    }
-    12%{
-        background: linear-gradient(45deg, #3c00ff, #ff3700);
-    }
-    24%{
-        background: linear-gradient(95deg, #3c00ff, #ff3700);
-    }
-    36%{
-        background: linear-gradient(145deg, #3c00ff, #ff3700);
-    }
-    48%{
-        background: linear-gradient(195deg, #3c00ff, #ff3700);
-    }
-    60%{
-        background: linear-gradient(245deg, #3c00ff, #ff3700);
-    }
-    72%{
-        background: linear-gradient(295deg, #3c00ff, #ff3700);
-    }
-    100%{
-        background: linear-gradient(360deg, #3c00ff, #ff3700);
-    }
-}
-
-header section {
+header .section {
     position: absolute;
     width: 100%;
     height: auto;
-    top: 350px;
+    top: 47px;
+    padding: 0px 50px;
+    color: #fff;
+    justify-items: center;
+}
+
+header .section2 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 220px;
     padding: 20px 50px;
     color: #fff;
+    justify-items: center;
+}
+
+header .section3 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 410px;
+    padding: 20px 50px;
+    color: #fff;
+    justify-items: center;
 }
 
 header section .cards {
@@ -470,31 +360,242 @@ header section .cards .card:hover .rest_card {
     opacity: 1;
 }
 
-header section #viewall {
-    position: absolute;
-    top: 20px;
-    right: 3%;
-    left: unset;
-    width: 50px;
-    height: 25px;
-    background: rgb(255, 255, 255, .3);
-    color: #fff;
+header section .cards2 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+    margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 20%;
-    font-size: 12px;
-    cursor: pointer;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+header section .cards2::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards2 .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
     transition: .3s linear;
-    z-index: 99999999;
+}
+
+header section .cards2 .card .poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards2 .card:hover {
+    min-width: 300px;
+    overflow: hidden;
+}
+
+header section .cards2 .card .rest_card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+header section .cards2 .card .rest_card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+header section .cards2 .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+header section .cards2 .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .cards2 .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .cards2 .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7);
+}
+
+header section .cards2 .card .rest_card .cont .sub h3 {
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+header section .cards2 .card .rest_card .cont .sub h3 span {
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 1000;
+    border-radius: 2px;
+}
+
+header section .cards2 .card .rest_card .cont .sub h3 i {
+    margin-right: 3px;
+}
+
+header section .cards2 .card:hover .rest_card {
     opacity: 1;
 }
-header section .bi-chevron-left , .bi-chevron-right{
+
+header section .cards3 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+header section .cards3::-webkit-scrollbar {
+    display: none;
+}
+
+header section .cards3 .card {
+    position: relative;
+    min-width: 130px;
+    height: 180px;
+    
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #000;
+    transition: .3s linear;
+}
+
+header section .cards3 .card .poster {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+header section .cards3 .card:hover {
+    min-width: 300px;
+    overflow: hidden;
+}
+
+header section .cards3 .card .rest_card {
     position: absolute;
-    top: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+header section .cards3 .card .rest_card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+header section .cards3 .card .rest_card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+header section .cards3 .card .rest_card .cont {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+header section .cards3 .card .rest_card .cont .sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header section .cards3 .card .rest_card .cont .sub p {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7);
+}
+
+header section .cards3 .card .rest_card .cont .sub h3 {
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+header section .cards3 .card .rest_card .cont .sub h3 span {
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 1000;
+    border-radius: 2px;
+}
+
+header section .cards3 .card .rest_card .cont .sub h3 i {
+    margin-right: 3px;
+}
+
+header section .cards3 .card:hover .rest_card {
+    opacity: 1;
+}
+
+header section .bi-arrow-left , .bi-arrow-right{
+    position: absolute;
+    top: 100%;
     left: 3%;
-    width: 25px;
-    height: 25px;
+    width: 33px;
+    height: 33px;
     background: rgb(255, 255, 255, .3);
     color: #fff;
     display: flex;
@@ -505,22 +606,28 @@ header section .bi-chevron-left , .bi-chevron-right{
     cursor: pointer;
     transition: .3s linear;
     z-index: 99999999;
-    opacity: 0;
 }
 
-header section .bi-chevron-right{
+header section .bi-arrow-right{
     left: unset;
-    top: 50%;
-    right: 3%;
+    top: 100%;
+    right: 15%;
 }
 
-header section:hover .bi-chevron-right {
+header section:hover .bi-arrow-right {
     opacity: 1;
 }
 
-header section:hover .bi-chevron-left {
+header section:hover .bi-arrow-left {
+    left: 15%;
     opacity: 1;
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 1250px) {
     header video {
@@ -560,18 +667,47 @@ header section:hover .bi-chevron-left {
 }
 
 @media screen and (max-width: 650px) {
-    header video {
-        position: absolute;
-        width: 520%;
-        height: 320%;
+    header::-webkit-scrollbar{
+        visibility: hidden;
     }
     header nav .logo_ul ul li a{
         font-size: 15px;
         font-weight: 600;
     }
+    
+    
+    
+
     header section #viewall{
         top: 15px;
         font-weight: 400;
+    }
+    header .section {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 180px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
+    }
+    header .section2 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 380px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
+    }
+    header .section3 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 580px;
+        padding: 0px 10px;
+        color: #fff;
+        justify-items: center;
     }
 }
 @media screen and (max-width: 375px){
