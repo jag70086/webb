@@ -65,7 +65,7 @@
 const startValue = urlParams.get('s');
         startVale = startValue.replace(/\+/g, ' ');
 
-        fetch(json_url).then((Response) => Response.json())
+        fetch("movie.json").then((Response) => Response.json())
         .then(data => {
             let { name, imdb, date, desc, pub, bposter, sposter, genre, url } = ele;
         let movies_array = data.filter(ele => {
