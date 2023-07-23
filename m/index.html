@@ -63,7 +63,7 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
 const startValue = urlParams.get('s');
-startValue = startValue.replace(/\+/g, ' ');
+
         fetch(json_url).then((Response) => Response.json())
         .then(data => {
         let movies_array = data.filter(ele => {
