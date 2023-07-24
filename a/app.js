@@ -43,18 +43,22 @@ fetch('links.json')
 });
 series_array.forEach((elem, i) => {
  let {drive, mega, fitcher, katfile, other, title} = elem ;
- hmm.href = drive
- hmm.innerText = "1. [Google Drive]"
+ if (title == ''){
+hmm2.innerText = "Uploading Soon..."
+ }
+else{
+  hmm.href = drive
+ hmm.innerText = "1. [Link1]"
  titl.innerText = title
  hmm1.href = mega
-hmm1.innerText = "2. [Mega]"
+hmm1.innerText = "2. [Link2]"
 hmm2.href = fitcher
-hmm2.innerText = "3. [Fitcher]"
+hmm2.innerText = "3. [Link3]"
 hmm3.href = katfile
-hmm3.innerText = "4. [Katfiles]"
+hmm3.innerText = "4. [Link4]"
 hmm4.href = other
-hmm4.innerText = "5. [Others]"
-
+hmm4.innerText = "5. [Link5]"
+}
 
   // Use the data to populate your website content, create links, etc.
 })})
