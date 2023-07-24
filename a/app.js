@@ -42,9 +42,9 @@ fetch('links.json')
     return ele.id == startValue;
 });
 series_array.forEach((elem, i) => {
- let {drive, mega, fitcher, katfile, other, title} = elem ;
- if (title == ''){
-hmm2.innerText = "Uploading Soon..."
+ let {drive, mega, fitcher, katfiles, other, title} = elem ;
+ if (title === null){
+hmm2.innerHtml = "Uploading Soon..."
  }
 else{
   hmm.href = drive
@@ -55,7 +55,7 @@ else{
 hmm1.innerText = "2. [Link2]"
 hmm2.href = fitcher
 hmm2.innerText = "3. [Link3]"
-hmm3.href = katfile
+hmm3.href = katfiles
 hmm3.innerText = "4. [Link4]"
 hmm4.href = other
 hmm4.innerText = "5. [Link5]"
