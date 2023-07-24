@@ -75,6 +75,7 @@
               function createCard(episodeNumber, episodeQuality, sposter, bposter) {
                 const card = document.createElement('a');
                 card.classList.add('card');
+                  card.href = episodeQuality
                   if(movies_array[0].type == 'movie'){
                 card.innerHTML = `
                     <img src="${sposter}" alt="${movies_array[0].name}" class="poster">
