@@ -68,7 +68,7 @@ body{
     border: 1px solid #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 300px;
 }
   
@@ -77,9 +77,10 @@ body{
     height: 100%;
     background-color: #007bff;
     transition: width 0.3s ease-in-out;
+    position: relative;
 }
 #loadingMessage{
-    position: absolute;
+    position: relative;
     top: 329px;
     color: #fff;
 }
