@@ -76,6 +76,7 @@
                 const card = document.createElement('a');
                 card.classList.add('card');
                   card.href = episodeQuality
+                  card.target = "_blank"
                   if(movies_array[0].type == 'movie'){
                 card.innerHTML = `
                     <img src="${sposter}" alt="${movies_array[0].name}" class="poster">
