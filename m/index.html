@@ -75,15 +75,13 @@
               function createCard(episodeNumber, episodeQuality, sposter, bposter) {
                 const card = document.createElement('a');
                 card.classList.add('card');
-                card.href = episodeQuality;
-                card.target = '_blank'; // Open link in a new tab
-                  if (episodeNumber == 1){
+                  if(movies_array[0].type == 'movie'){
                 card.innerHTML = `
                     <img src="${sposter}" alt="${movies_array[0].name}" class="poster">
                     <div class="rest_card">
                         <img src="${bposter}" alt="">
                         <div class="cont">
-                            <h4>Episode ${movies_array[0].name}</h4>
+                            <h4>${movies_array[0].name}</h4>
                         </div>
                     </div>
                 `;}
