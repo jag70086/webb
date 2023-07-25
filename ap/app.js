@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
           timerButton.disabled = false;
   
           // Redirect to another page after the timer finishes
-          window.location.href = `https://www.movies4wiz.online/ap/n.html?s=${Value+1}`; // Replace this URL with your desired page URL
+          window.location.href = `https://www.movies4wiz.online/sp?s=${Value+1}`; // Replace this URL with your desired page URL
         }
       }, 1000);
     });
