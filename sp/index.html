@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const timerButton = document.getElementById('timerButton');
         let timerInterval;
       
-        timerButton.addEventListener('click', function () {
+        
           let remainingTime = 30;
           timerButton.disabled = true;
           timerButton.textContent = `Please wait ${remainingTime} seconds`;
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
               window.location.href = `https://www.movies4wiz.online/ap?s=${Value+1}`; // Replace this URL with your desired page URL
             }
           }, 1000);
-        });
+       
       });
       
       </script>
